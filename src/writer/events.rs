@@ -136,6 +136,15 @@ impl<'a> XmlEvent<'a> {
     #[inline]
     pub fn characters(data: &'a str) -> XmlEvent<'a> { XmlEvent::Characters(data) }
 
+    #[inline]
+    pub fn charactersf64(data: &'a f64) -> XmlEvent<'a> { XmlEvent::Characters(stringify!(data)) }
+
+    #[inline]
+    pub fn charactersi32(data: &'a i32) -> XmlEvent<'a> { XmlEvent::Characters(stringify!(data)) }
+
+    // #[inline]
+    // pub fn characters(data: &'a f64) -> XmlEvent<'a> { XmlEvent::Characters(data) }
+
     /// Returns a comment event.
     #[inline]
     pub fn comment(data: &'a str) -> XmlEvent<'a> { XmlEvent::Comment(data) }
