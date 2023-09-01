@@ -1,3 +1,16 @@
+## Version 0.8.7
+
+* Basic parsing of DTD internal subset
+* Speed improvements
+
+## Version 0.8.6
+
+* Fixed parsing of incorrectly nested comments and processing instructions
+
+## Version 0.8.5
+
+* Updated source code to edition 2018 and fixed/updated some Rust idioms.
+
 ## Version 0.8.4
 
 * Fixed recognition of `?>`, `]]>` and `/>` tokens as characters.

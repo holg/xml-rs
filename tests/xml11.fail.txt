@@ -1,0 +1,7 @@
+rmt-001 001.xml  External subset has later version number 
+rmt-002 002.xml  External PE has later version number 
+rmt-003 003.xml  External general entity has later version number 
+rmt-004 004.xml  External general entity has later version number (no decl means 1.0) 
+rmt-005 005.xml  Indirect external general entity has later version number 
+rmt-009 009.xml  External general entity has implausible version number 
+rmt-054 054.xml  Contains a character reference to a C0 control character (form-feed) in an entity value. This will be legal (in XML 1.1) when the entity declaration is parsed, but what about when it is used? According to the grammar in the CR spec, it should be illegal (because the replacement text must match "content"), but this is probably not intended. This will be fixed in the PR version. ; 12:9 Invalid character U+000C
