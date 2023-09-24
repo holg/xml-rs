@@ -150,12 +150,12 @@ impl<'a> XmlEvent<'a> {
     #[inline]
     #[must_use]
     pub fn charactersf64(data: &'a f64) -> XmlEvent<'a> {
-        let test = stringify!(*data);
         XmlEvent::Charactersf64(data)
     }
 
     #[inline]
     #[must_use]
+    #[allow(unused_variables)]
     pub fn charactersi32(data: &'a i32) -> XmlEvent<'a> { XmlEvent::Characters(stringify!(&data)) }
 
     // #[inline]
@@ -179,6 +179,7 @@ impl<'a> From<&'a str> for XmlEvent<'a> {
 
 impl<'a> From<&'a f64> for XmlEvent<'a> {
     #[inline]
+    #[allow(unused_variables)]
     fn from(s: &'a f64) -> XmlEvent<'a> {
         XmlEvent::Characters(stringify!(s))
     }
